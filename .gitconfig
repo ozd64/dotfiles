@@ -29,6 +29,7 @@
 	# Show all branches
 	allBranches = branch -av
 	branchName = !git branch | grep "^*" | awk '{ print $2 }'
+	co = commit
 
 [web]
 	browser = firefox
