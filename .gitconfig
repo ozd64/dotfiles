@@ -14,7 +14,7 @@
 
 [color "branch"]
 	current = blue bold
-	local = gray bold
+	local = cyan bold
 	remote = green bold
 
 [color "status"]
@@ -27,7 +27,7 @@
 
 [alias]
 	# Show all branches
-	allBranches = branch -av
+	allBranches = !git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:green)%(committerdate:short)%(color:reset))'
 	branchName = !git branch | grep "^*" | awk '{ print $2 }'
 	co = commit
 
