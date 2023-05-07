@@ -15,7 +15,7 @@ if status is-interactive
     abbr gb git allBranches
     abbr gp git push
     abbr t tmux attach
-    abbr tm-ls tmux attach
+    abbr tm-ls tmux ls
     
     # Add aliases for common ops.
     alias dotfiles='cd ~/.dotfiles'
