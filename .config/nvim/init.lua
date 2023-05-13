@@ -95,6 +95,15 @@ local plugin_neo_tree = {
     }
 }
 
+local plugin_treesj = {
+    'Wansmer/treesj',
+    keys = { '<space>m', '<space>j', '<space>s' },
+    dependencies = { 'nvim-treesitter/nvim-treesitter' },
+    config = function()
+        require('treesj').setup({})
+    end,
+}
+
 local nvimplugins = {
     plugin_telescope,
     plugin_colorscheme,
@@ -102,7 +111,8 @@ local nvimplugins = {
     plugin_undotree,
     plugin_vim_figutive,
     plugin_lsp_zero,
-    plugin_neo_tree
+    plugin_neo_tree,
+    plugin_treesj
 }
 
 -- Plugins end
