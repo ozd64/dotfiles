@@ -1,8 +1,10 @@
 {
-  "lazy.nvim": { "branch": "main", "commit": "3fef7697869bd87d53d57267b5a018580c1e99ca" },
+  "lazy.nvim": { "branch": "main", "commit": "e9b3b83914c2adf5385111a4f163ced0b4b7f529" },
   "nvim-treesitter": { "branch": "master", "commit": "15300c1a10a3aa857c7925d854d58cce6e758d51" },
   "plenary.nvim": { "branch": "master", "commit": "9ac3e9541bbabd9d73663d757e4fe48a675bb054" },
   "rose-pine": { "branch": "main", "commit": "2eace84d649d76d41dcd44a87a17f64c7c4a586d" },
   "telescope.nvim": { "branch": "master", "commit": "c1a2af0af69e80e14e6b226d3957a064cd080805" },
+  "undotree": { "branch": "master", "commit": "485f01efde4e22cb1ce547b9e8c9238f36566f21" },
+  "vim-fugitive": { "branch": "master", "commit": "5f0d280b517cacb16f59316659966c7ca5e2bea2" },
   "which-key.nvim": { "branch": "main", "commit": "5a6c954a5a46023c19acc03a8b6d7c3e57964fc5" }
 }

@@ -31,13 +31,16 @@ local plugin_treesitter = {
 local plugin_colorscheme = { 'rose-pine/neovim', name = 'rose-pine', config = {
 	disable_italics = true
 }}
-
+local plugin_undotree = "mbbill/undotree"
+local vim_figutive = "tpope/vim-fugitive"
 
 local nvimplugins = {
 	plugin_whichkey,
 	plugin_telescope,
 	plugin_colorscheme,
-	plugin_treesitter
+	plugin_treesitter,
+	plugin_undotree,
+	vim_figutive
 }
 
 -- Plugins end
