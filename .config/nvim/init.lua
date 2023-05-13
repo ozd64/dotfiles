@@ -72,6 +72,12 @@ local plugin_neo_tree = {
                 },
             },
         },
+        filesystem = {
+            filtered_items = {
+                visible = true,
+                hide_dotfiles = false
+            }
+        },
         document_symbols = {
             kinds = {
                 File = { icon = "󰈙", hl = "Tag" },
