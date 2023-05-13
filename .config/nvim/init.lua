@@ -17,7 +17,6 @@ vim.opt.rtp:prepend(lazypath)
 
 -- Plugins
 
-local plugin_whichkey = "folke/which-key.nvim"
 local plugin_telescope = {
     'nvim-telescope/telescope.nvim', tag = '0.1.1',
     dependencies = { 'nvim-lua/plenary.nvim' }
@@ -38,9 +37,8 @@ local plugin_lsp_zero = {
     branch = 'v2.x',
     dependencies = {
         -- LSP Support
-        {'neovim/nvim-lspconfig'},             -- Required
-        {                                      -- Optional
-        'williamboman/mason.nvim',
+        {'neovim/nvim-lspconfig'},
+        {'williamboman/mason.nvim',
         build = function()
             pcall(vim.cmd, 'MasonUpdate')
         end,
@@ -54,14 +52,57 @@ local plugin_lsp_zero = {
 }
 }
 
+local plugin_neo_tree = {
+    "nvim-neo-tree/neo-tree.nvim",
+    dependencies = {
+        "nvim-lua/plenary.nvim",
+        "nvim-tree/nvim-web-devicons",
+        "MunifTanjim/nui.nvim",
+    },
+    config = {
+        default_component_configs = {
+            icon = {
+                folder_empty = "󰜌",
+                folder_empty_open = "󰜌",
+            },
+            git_status = {
+                symbols = {
+                    renamed   = "󰁕",
+                    unstaged  = "󰄱",
+                },
+            },
+        },
+        document_symbols = {
+            kinds = {
+                File = { icon = "󰈙", hl = "Tag" },
+                Namespace = { icon = "󰌗", hl = "Include" },
+                Package = { icon = "󰏖", hl = "Label" },
+                Class = { icon = "󰌗", hl = "Include" },
+                Property = { icon = "󰆧", hl = "@property" },
+                Enum = { icon = "󰒻", hl = "@number" },
+                Function = { icon = "󰊕", hl = "Function" },
+                String = { icon = "󰀬", hl = "String" },
+                Number = { icon = "󰎠", hl = "Number" },
+                Array = { icon = "󰅪", hl = "Type" },
+                Object = { icon = "󰅩", hl = "Type" },
+                Key = { icon = "󰌋", hl = "" },
+                Struct = { icon = "󰌗", hl = "Type" },
+                Operator = { icon = "󰆕", hl = "Operator" },
+                TypeParameter = { icon = "󰊄", hl = "Type" },
+                StaticMethod = { icon = '󰠄 ', hl = 'Function' },
+            }
+        }
+    }
+}
+
 local nvimplugins = {
-    plugin_whichkey,
     plugin_telescope,
     plugin_colorscheme,
     plugin_treesitter,
     plugin_undotree,
     plugin_vim_figutive,
-    plugin_lsp_zero
+    plugin_lsp_zero,
+    plugin_neo_tree
 }
 
 -- Plugins end
