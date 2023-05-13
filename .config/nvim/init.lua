@@ -22,19 +22,30 @@ local plugin_telescope = {
 	'nvim-telescope/telescope.nvim', tag = '0.1.1',
 	dependencies = { 'nvim-lua/plenary.nvim' }
 }
-local plugin_colorscheme = { 'rose-pine/neovim', name = 'rose-pine' }
+local plugin_treesitter = {
+	'nvim-treesitter/nvim-treesitter',
+	config = function()
+		vim.cmd("TSUpdate")
+	end
+}
+local plugin_colorscheme = { 'rose-pine/neovim', name = 'rose-pine', config = {
+	disable_italics = true
+}}
 
 
 local nvimplugins = {
 	plugin_whichkey,
 	plugin_telescope,
-	plugin_colorscheme
+	plugin_colorscheme,
+	plugin_treesitter
 }
+
+-- Plugins end
 
 require("lazy").setup(nvimplugins)
 
 -- Setting up colorscheme
-vim.cmd.colorscheme("rose-pine-moon")
+vim.cmd.colorscheme("rose-pine")
 vim.cmd.set("number relativenumber")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
