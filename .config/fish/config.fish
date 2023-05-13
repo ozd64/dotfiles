@@ -4,8 +4,8 @@ if status is-interactive
     set fish_greeting # Remove fish greeting
     
     # Extending PATH variable
-    fish_add_path . # Always add the current folder into the path
-    fish_add_path ~/bin
+    set -x PATH $PATH:.
+    fish_add_path -g ~/bin
     
     #Add Abbreviations
     abbr gs git status
@@ -22,4 +22,5 @@ if status is-interactive
     alias dev-rust='cd ~/dev/project/rust'
     alias dev-java='cd ~/dev/project/java'
     alias dev-elixir='cd ~/dev/project/elixir'
+    alias dev-c='cd ~/dev/project/cc++'
 end
