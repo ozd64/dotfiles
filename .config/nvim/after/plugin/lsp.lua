@@ -17,7 +17,8 @@ lsp.setup_servers({
     'bashls',
     'gopls',
     'jsonls',
-    'cmake'
+    'cmake',
+    'pylsp'
 })
 
 
