@@ -14,8 +14,29 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+
+-- Plugins
+
+local plugin_whichkey = "folke/which-key.nvim"
+local plugin_telescope = {
+	'nvim-telescope/telescope.nvim', tag = '0.1.1',
+	dependencies = { 'nvim-lua/plenary.nvim' }
+}
+local plugin_colorscheme = { 'rose-pine/neovim', name = 'rose-pine' }
+
+
 local nvimplugins = {
-    "folke/which-key.nvim"
-};
+	plugin_whichkey,
+	plugin_telescope,
+	plugin_colorscheme
+}
 
 require("lazy").setup(nvimplugins)
+
+-- Setting up colorscheme
+vim.cmd.colorscheme("rose-pine-moon")
+vim.cmd.set("number relativenumber")
+
+vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+
