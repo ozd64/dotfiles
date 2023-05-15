@@ -30,6 +30,7 @@ lsp.on_attach(function(client, bufnr)
     vim.keymap.set("n", "go", function() vim.lsp.buf.type_definition() end, opts)
     vim.keymap.set("n", "gs", function() vim.lsp.buf.signature_help() end, opts)
     vim.keymap.set("n", "gr", function() vim.lsp.buf.references() end, opts)
+    vim.keymap.set("n", "ga", function() vim.lsp.buf.code_action() end, opts)
     vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, opts)
 
     local cmp = require('cmp')
