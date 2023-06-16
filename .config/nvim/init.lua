@@ -27,7 +27,7 @@ local plugin_treesitter = {
         vim.cmd("TSUpdate")
     end
 }
-local plugin_colorscheme = { 'rose-pine/neovim', name = 'rose-pine', config = {
+local plugin_colorscheme = { 'folke/tokyonight.nvim', config = {
     disable_italics = true
 }}
 local plugin_undotree = "mbbill/undotree"
@@ -126,7 +126,7 @@ local nvimplugins = {
 require("lazy").setup(nvimplugins)
 
 -- Setting up colorscheme
-vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("tokyonight-night")
 vim.cmd.set("number relativenumber")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
