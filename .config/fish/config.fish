@@ -8,7 +8,7 @@ if status is-interactive
     # Extending PATH variable
     set -x PATH $PATH:.
     fish_add_path -g ~/bin
-    fish_add_path -g ~/.cargo/bin
+    #fish_add_path -g ~/.cargo/bin
     
     #Add Abbreviations
     abbr gs git status
