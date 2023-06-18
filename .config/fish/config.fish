@@ -1,4 +1,6 @@
 source ~/.config/fish/git_utility.fish
+source ~/.asdf/asdf.fish
+
 
 if status is-interactive
     set fish_greeting # Remove fish greeting
@@ -6,6 +8,7 @@ if status is-interactive
     # Extending PATH variable
     set -x PATH $PATH:.
     fish_add_path -g ~/bin
+    fish_add_path -g ~/.cargo/bin
     
     #Add Abbreviations
     abbr gs git status
