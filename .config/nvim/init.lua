@@ -28,8 +28,13 @@ local plugin_treesitter = {
     end
 }
 local plugin_colorscheme = { 'folke/tokyonight.nvim', config = {
-    disable_italics = true
-}}
+        styles = {
+            comments = {italic = false},
+            keywords = {italic = false}
+        }
+    }
+}
+
 local plugin_undotree = "mbbill/undotree"
 local plugin_vim_figutive = "tpope/vim-fugitive"
 local plugin_lsp_zero = {
