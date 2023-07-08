@@ -11,7 +11,9 @@ if status is-interactive
     fish_add_path -g ~/.asdf
     fish_add_path -g ~/.asdf/bin
     fish_add_path -g ~/bin
-    
+    fish_add_path -g ~/.local/bin
+    fish_add_path -g ~/.cargo/bin
+
     #Add Abbreviations
     abbr gs git status
     abbr gco git commit
@@ -21,6 +23,10 @@ if status is-interactive
     abbr gp git push
     abbr t tmux attach
     abbr tm-ls tmux ls
+
+    # CMake abbrs
+    abbr cmake-debug 'cmake -DCMAKE_BUILD_TYPE=Debug ../.. && cmake --build .'
+    abbr cmake-release 'cmake -DCMAKE_BUILD_TYPE=Release ../.. && cmake --build .'
     
     # Add aliases for common ops.
     alias dotfiles='cd ~/.dotfiles'
