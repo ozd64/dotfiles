@@ -1,4 +1,4 @@
 # Dotfiles
 
-* Operating System: Arch Linux
-* Desktop Environment: XFCE 4
+* Operating System: Fedora Linux
+* Desktop Environment: GNOME 44
