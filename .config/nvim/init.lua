@@ -27,14 +27,7 @@ local plugin_treesitter = {
         vim.cmd("TSUpdate")
     end
 }
-local plugin_colorscheme = { 'folke/tokyonight.nvim', config = {
-        styles = {
-            comments = {italic = false},
-            keywords = {italic = false}
-        }
-    }
-}
-
+local plugin_colorscheme = { "ellisonleao/gruvbox.nvim", priority = 1000 , config = true}
 local plugin_undotree = "mbbill/undotree"
 local plugin_vim_figutive = "tpope/vim-fugitive"
 local plugin_lsp_zero = {
@@ -131,7 +124,7 @@ local nvimplugins = {
 require("lazy").setup(nvimplugins)
 
 -- Setting up colorscheme
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("gruvbox")
 vim.cmd.set("number relativenumber")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
