@@ -7,6 +7,7 @@ if status is-interactive
     
     # Extending PATH variable
     set -x PATH $PATH:.
+
     fish_add_path -g ~/bin
     fish_add_path -g ~/.asdf
     fish_add_path -g ~/.asdf/bin
