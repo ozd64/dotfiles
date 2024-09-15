@@ -9,7 +9,7 @@ require('lspconfig').lua_ls.setup(lsp.nvim_lua_ls())
 
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 lsp.setup_servers({
-    'tsserver',
+    'ts_ls',
     'eslint',
     'rust_analyzer',
     'java_language_server',
