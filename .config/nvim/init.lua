@@ -28,12 +28,14 @@ local plugin_treesitter = {
     end
 }
 
-local plugin_colorscheme = { "rose-pine/neovim", name = "rose-pine", config = {
-        styles = {
-            italic = false
-        }
-    }
-}
+-- local plugin_colorscheme = { "rose-pine/neovim", name = "rose-pine", config = {
+--         styles = {
+--             italic = false
+--         }
+--     }
+-- }
+local plugin_colorscheme = { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+
 local plugin_undotree = "mbbill/undotree"
 local plugin_vim_figutive = "tpope/vim-fugitive"
 local plugin_lsp_zero = {
@@ -130,7 +132,8 @@ local nvimplugins = {
 require("lazy").setup(nvimplugins)
 
 -- Setting up colorscheme
-vim.cmd.colorscheme("rose-pine")
+-- vim.cmd.colorscheme("rose-pine")
+vim.cmd.colorscheme("catppuccin-mocha")
 vim.cmd.set("number relativenumber")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
