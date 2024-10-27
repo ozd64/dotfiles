@@ -13,6 +13,7 @@ if not vim.loop.fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
+vim.opt.cursorline = true
 
 
 -- Plugins
@@ -28,7 +29,7 @@ local plugin_treesitter = {
     end
 }
 
-local plugin_colorscheme = { "catppuccin/nvim", name = "catppuccin", priority = 1000 }
+local plugin_colorscheme = { "rebelot/kanagawa.nvim", config = {theme = "wave", keywordStyle = {italic = false}}, priority = 1000 }
 
 local plugin_undotree = "mbbill/undotree"
 local plugin_vim_figutive = "tpope/vim-fugitive"
@@ -126,7 +127,7 @@ local nvimplugins = {
 require("lazy").setup(nvimplugins)
 
 -- Setting up colorscheme
-vim.cmd.colorscheme("catppuccin-mocha")
+vim.cmd.colorscheme("kanagawa")
 vim.cmd.set("number relativenumber")
 
 vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
